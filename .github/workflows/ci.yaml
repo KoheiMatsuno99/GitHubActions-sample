@@ -23,4 +23,4 @@ jobs:
         run: go mod tidy
 
       - name: Run tests
-        run: go test ./... -v -short
+        run: go test ./... -v -short | grep -E '--- FAIL|PASS|FAIL|ok'
