@@ -24,5 +24,4 @@ jobs:
 
       - name: Run tests
         run: |
-          go test -v -short ./... | tee test-output.txt
-          grep 'FAIL' test-output.txt
+          go test -v -short ./... | tee test-output.txt  | grep 'FAIL' test-output.txt
