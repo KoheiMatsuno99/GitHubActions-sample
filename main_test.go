@@ -24,7 +24,7 @@ func Test_fizzBuzz(t *testing.T) {
 		{
 			name: "Buzz",
 			args: args{n: 5},
-			want: "5",
+			want: "Buzz",
 		},
 		{
 			name: "Number",
