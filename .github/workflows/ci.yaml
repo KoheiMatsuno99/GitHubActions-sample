@@ -27,8 +27,9 @@ jobs:
 
       - name: Run tests
         run: |
-          set -o pipefail && go test ./...  -json -v -short 
-          tparse -all
+          set -o pipefail 
+          go test ./...  -json -v -short 
+          go run github.com/mfridman/tparse -all
       - name: Add job summary
         if: always()
         run: |
