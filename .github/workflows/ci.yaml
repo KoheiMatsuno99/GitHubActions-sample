@@ -23,7 +23,7 @@ jobs:
         run: go mod tidy
 
       - name: Install tparse
-        run: go install github.com/mfridman/tparse@latest
+        run: go get github.com/mfridman/tparse@latest
 
       - name: Run tests
         run: |
