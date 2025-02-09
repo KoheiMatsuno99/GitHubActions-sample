@@ -25,4 +25,4 @@ jobs:
       - name: Run tests
         run: |
           go test -v -short ./... | tee test-output.txt
-          cat test-output.txt | grep -E '--- FAIL|FAIL'
+          grep 'FAIL' test-output.txt
