@@ -23,14 +23,13 @@ jobs:
         run: go mod tidy
 
       - name: Install tparse
-        run: go get github.com/mfridman/tparse@latest
+        run: go install github.com/mfridman/tparse@latest
 
       - name: Run tests
         run: |
           set -o pipefail
-          go test ./... -v -short -json | tee ./go-test.out | go run github.com/mfridman/tparse -all
+          go test ./... -v -short -json | tee ./go-test.out | tparse -all
       - name: Add job summary
         if: always()
         run: |
-          set -o pipefail
-          $GOPATH/bin/tparse -file ./go-test.out -format markdown >> $GITHUB_STEP_SUMMARY
+          tparse -file ./go-test.out -format markdown >> $GITHUB_STEP_SUMMARY
