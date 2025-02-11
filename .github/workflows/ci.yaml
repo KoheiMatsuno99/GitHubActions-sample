@@ -25,9 +25,6 @@ jobs:
       - name: Install tparse
         run: go install github.com/mfridman/tparse@latest
 
-      - name: Adding markdown
-        run: echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
-
       - name: Run tests
         run: |
           set -o pipefail
@@ -35,4 +32,4 @@ jobs:
       - name: Add job summary
         if: always()
         run: |
-          echo "$(tparse -file ./go-test.out -format markdown)" >> $GITHUB_STEP_SUMMARY
+          tparse -file ./go-test.out -format markdown >> $GITHUB_STEP_SUMMARY
