@@ -22,7 +22,7 @@ func Test_divide(t *testing.T) {
 		{
 			name:    "Divide 4 by 0",
 			args:    args{a: 4, b: 0},
-			wantErr: false,
+			wantErr: true,
 		},
 	}
 	for _, tt := range tests {
