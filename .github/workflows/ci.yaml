@@ -33,4 +33,4 @@ jobs:
         if: always()
         run: |
           set -o pipefail
-          go run github.com/mfridman/tparse -file ./go-test.out -format markdown >> $GITHUB_STEP_SUMMARY
+          $GOPATH/bin/tparse -file ./go-test.out -format markdown >> $GITHUB_STEP_SUMMARY
