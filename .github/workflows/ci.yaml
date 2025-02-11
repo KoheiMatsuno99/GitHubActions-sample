@@ -32,4 +32,4 @@ jobs:
       - name: Add job summary
         if: always()
         run: |
-          $HOME/go//bin/tparse -file ./go-test.out -format markdown >> $GITHUB_STEP_SUMMARY
+          tparse -file ./go-test.out -format markdown
