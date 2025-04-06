@@ -22,6 +22,9 @@ jobs:
       - name: Install dependencies
         run: go mod tidy
 
+      - name: lint modernize
+        run: go run golang.org/x/tools/gopls/internal/analysis/modernize/cmd/modernize@latest -test ./...
+
       - name: Install tparse
         run: go install github.com/mfridman/tparse@latest
 
