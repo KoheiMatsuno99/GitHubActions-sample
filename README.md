@@ -16,3 +16,5 @@ GitHub Actionsでgo test -vしているが、ログが見づらい。失敗し�
 ## modernize
 
 modernizeを使うことで、古いGoのコードを検知してくれる。
+
+https://github.com/KoheiMatsuno99/GitHubActions-sample/pull/3 にて対応
