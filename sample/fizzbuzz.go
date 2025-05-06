@@ -13,3 +13,11 @@ func fizzBuzz(n int) string {
 		return fmt.Sprintf("%d", n)
 	}
 }
+
+// Added a new feature to handle negative numbers
+func fizzBuzzWithNegative(n int) string {
+	if n < 0 {
+		return "Negative numbers are not allowed"
+	}
+	return fizzBuzz(n)
+}
